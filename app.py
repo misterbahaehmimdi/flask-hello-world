@@ -90,7 +90,7 @@ def check():
         else:
          data2.loc[index2, 'statut'] =0
   
-        € d2['statut']=0
+        # d2['statut']=0
         
        except Exception as eror:
         lis.append({"name":nm,"url":d1['url'],"text":d2['text'],"error":str(eror)})
