@@ -4,4 +4,5 @@ requests
 wget
 pandas
 openpyxl
+selenium
 chromedriver-autoinstaller
