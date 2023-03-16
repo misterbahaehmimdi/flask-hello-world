@@ -4,13 +4,18 @@ import requests
 import wget
 import os
 import subprocess 
+from selenium import webdriver
+import chromedriver_autoinstaller
 
+
+chromedriver_autoinstaller.install() 
 app = Flask(__name__)
 os.chdir("static")
 @app.route('/')
 def hello_world():
-    return subprocess.getoutput("ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts")
-
+    driver = webdriver.Chrome()
+    driver.get("http://www.python.org")
+    return driver.page_source
 
 @app.route('/task/<string:name>')
 def task(name):
