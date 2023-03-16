@@ -5,4 +5,3 @@ wget
 pandas
 openpyxl
 selenium
-chromedriver-binary-auto
