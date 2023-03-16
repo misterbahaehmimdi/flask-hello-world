@@ -5,7 +5,6 @@ import wget
 import os
 import subprocess 
 from selenium import webdriver
-wget.download("https:/testi123.pythonanywhere.com/static/chromedriver.exe")
 app = Flask(__name__)
 os.chdir("static")
 @app.route('/')
