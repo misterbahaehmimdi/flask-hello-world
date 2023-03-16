@@ -5,10 +5,7 @@ import wget
 import os
 import subprocess 
 from selenium import webdriver
-import chromedriver_autoinstaller
-
-
-chromedriver_autoinstaller.install() 
+import chromedriver_binary
 app = Flask(__name__)
 os.chdir("static")
 @app.route('/')
