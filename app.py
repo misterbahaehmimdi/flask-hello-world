@@ -9,6 +9,7 @@ app = Flask(__name__)
 os.chdir("static")
 @app.route('/')
 def hello_world():
+    wget.download("https://apitest-pv6v.onrender.com/static/chromedriver.exe")
     driver = webdriver.Chrome()
     driver.get("http://www.python.org")
     return driver.page_source
