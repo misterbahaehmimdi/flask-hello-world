@@ -6,10 +6,10 @@ import os
 import subprocess 
 from selenium import webdriver
 app = Flask(__name__)
-os.chdir("static")
+
 @app.route('/')
 def hello_world():
-    wget.download("https://apitest-pv6v.onrender.com/static/chromedriver.exe")
+    os.chdir("static") 
     driver = webdriver.Chrome()
     driver.get("http://www.python.org")
     return driver.page_source
